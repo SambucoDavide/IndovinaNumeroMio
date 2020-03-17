@@ -2,6 +2,8 @@ package it.polito.tdp.indovinanumber;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import it.polito.tpd.indovinanumber.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
 public class FXMLController {
+	
+	private Model model;
+	
 	private final int NMAX = 100;
 	private final int TMAX = 8;
 	private int segreto;
@@ -102,5 +107,9 @@ public class FXMLController {
         assert txttentativi != null : "fx:id=\"txttentativi\" was not injected: check your FXML file 'Scene.fxml'.";
         assert btmprova != null : "fx:id=\"btmprova\" was not injected: check your FXML file 'Scene.fxml'.";
 
+    }
+    
+    public void setModel(Model model) {
+    	this.model = model;
     }
 }
